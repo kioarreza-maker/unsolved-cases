@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Casefiles — Unsolved</title>
+  <link rel="stylesheet" href="style.css"/>
+  <!-- jsPDF and html2canvas from CDNs -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>CASEFILES — UNSOLVED</h1>
+      <p class="sub">Immersive dossiers you can read and download. The last page of the PDF reveals the killer.</p>
+    </header>
+
+    <section id="cases" class="cards"></section>
+
+    <footer>
+      <small>Built with ❤️ — open-source. Deploy on GitHub Pages or Netlify.</small>
+    </footer>
+  </main>
+
+  <!-- Reader modal -->
+  <div id="reader" class="modal hidden" aria-hidden="true">
+    <div class="modal-inner">
+      <button id="closeReader" class="btn close">✕</button>
+      <div id="pageContainer" class="page-container"></div>
+      <nav class="reader-controls">
+        <button id="prevBtn" class="btn">← Prev</button>
+        <span id="pageCounter">1 / 1</span>
+        <button id="nextBtn" class="btn">Next →</button>
+        <button id="downloadBtn" class="btn primary">Download PDF</button>
+      </nav>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
